@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AERIS Support</title>
+<style>
+  :root {
+    --paper: #FAF7F1;
+    --ink: #26291F;
+    --ink-soft: #5C6354;
+    --sage: #4E7352;
+    --sage-pale: #E9EEE3;
+    --line: #DEDACB;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14160F;
+      --ink: #EDE9DC;
+      --ink-soft: #9CA290;
+      --sage: #8FB38C;
+      --sage-pale: #1D2318;
+      --line: #2A2D21;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14160F;
+    --ink: #EDE9DC;
+    --ink-soft: #9CA290;
+    --sage: #8FB38C;
+    --sage-pale: #1D2318;
+    --line: #2A2D21;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Work Sans", -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  header { margin-bottom: 40px; }
+
+  .mark {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 14px;
+  }
+
+  .dek { color: var(--ink-soft); font-size: 15px; margin: 0; max-width: 56ch; }
+
+  .contact {
+    background: var(--sage-pale);
+    border-radius: 14px;
+    padding: 24px 26px;
+    margin: 36px 0 48px;
+  }
+
+  .contact p { margin: 0; font-size: 16px; }
+  .contact a { font-weight: 600; }
+
+  section {
+    padding: 30px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  section:first-of-type { border-top: none; padding-top: 0; }
+
+  h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -0.005em;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+
+  section p { margin: 0 0 12px; max-width: 62ch; }
+  section p:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--sage);
+    text-decoration-color: color-mix(in srgb, var(--sage) 45%, transparent);
+    text-underline-offset: 3px;
+  }
+  a:hover, a:focus-visible { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; border-radius: 2px; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    justify-content: space-between;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <span class="mark" aria-hidden="true">🍃</span>
+    <p class="eyebrow">AERIS — Nature Alarm</p>
+    <h1>Support</h1>
+    <p class="dek">Answers to common questions, and how to reach us if something's not working.</p>
+  </header>
+
+  <div class="contact">
+    <p>Can't find your answer below? Email <a href="mailto:wyun1984@gmail.com">wyun1984@gmail.com</a> — we read every message.</p>
+  </div>
+
+  <section>
+    <h2>How AERIS works</h2>
+    <p>Set a wake-up time, and AERIS plays a nature sound that fades in gently instead of blasting at full volume. In automatic mode, it picks the sound to match the local weather — sunny, rainy, windy, stormy, or snowy — at the moment your alarm actually fires.</p>
+  </section>
+
+  <section>
+    <h2>Permissions AERIS asks for</h2>
+    <p><strong>Alarms:</strong> required so iOS can ring your alarm reliably, even if AERIS isn't open.</p>
+    <p><strong>Location (while using the app):</strong> only needed for automatic weather-matched sounds. If you'd rather not share it, pick a fixed sound manually instead — alarms still work exactly the same.</p>
+  </section>
+
+  <section>
+    <h2>My alarm didn't ring, or rang with the wrong sound</h2>
+    <p>Check Settings → AERIS and make sure Alarms permission is still allowed. If you're using automatic mode, the weather sound reflects the forecast as of roughly an hour before the alarm fires — if the weather changed very suddenly right before, the sound may not have caught up.</p>
+  </section>
+
+  <section>
+    <h2>Can I use my own sounds?</h2>
+    <p>Not yet — AERIS currently ships with a fixed set of nature sounds. This may change in a future update.</p>
+  </section>
+
+  <section>
+    <h2>Does AERIS cost anything?</h2>
+    <p>No. AERIS is free, with no in-app purchases or subscriptions.</p>
+  </section>
+
+  <footer>
+    <span>AERIS — Nature Alarm</span>
+    <a href="index.html">Privacy Policy</a>
+  </footer>
+</div>
+
+</body>
+</html>
